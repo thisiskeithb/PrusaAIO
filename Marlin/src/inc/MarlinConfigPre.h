@@ -36,6 +36,12 @@
 
 #include "../core/macros.h"
 #include "../core/boards.h"
+
+// PRUSA_AIO files
+#include "../../Prusa_AIO_Configuration.h"
+#include "Prusa_AIO_SanityCheck.h"
+#include "Prusa_AIO_Conditionals.h"
+
 #include "../../Configuration.h"
 
 #ifdef CUSTOM_VERSION_FILE

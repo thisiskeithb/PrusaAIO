@@ -203,7 +203,7 @@
     #define DOGLCD_A0                LCD_PINS_DC
     #define LCD_BACKLIGHT_PIN               -1
     #define LCD_RESET_PIN            EXP1_05_PIN
-    #define NEOPIXEL_PIN             EXP1_06_PIN
+    //#define NEOPIXEL_PIN             EXP1_06_PIN
     #define DOGLCD_MOSI              EXP2_06_PIN
     #define DOGLCD_SCK               EXP2_02_PIN
     #define FORCE_SOFT_SPI
@@ -243,7 +243,7 @@
 
 // LED driving pin
 #ifndef NEOPIXEL_PIN
-  #define NEOPIXEL_PIN                      PA2
+  //#define NEOPIXEL_PIN                      PA2
 #endif
 
 //
