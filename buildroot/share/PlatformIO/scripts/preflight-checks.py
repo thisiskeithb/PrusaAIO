@@ -103,6 +103,11 @@ if pioutil.is_pio_build():
 		rm_ofile("inc", "Warnings")
 
 		#
+		# Give Prusa AIO warnings on every build
+		#
+		rm_ofile("inc", "Prusa_AIO_Warnings")
+
+		#
 		# Rebuild 'settings.cpp' for EEPROM_INIT_NOW
 		#
 		if 'EEPROM_INIT_NOW' in env['MARLIN_FEATURES']:
