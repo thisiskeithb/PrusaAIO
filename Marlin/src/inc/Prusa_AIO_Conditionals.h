@@ -461,8 +461,8 @@
 //===========================================================================
 
 #if ENABLED(PRUSA_AIO_THERMISTOR_STOCK_SEMITEC_104NT)
-  #define TEMP_SENSOR_0   5
-  #define HEATER_0_MAXTEMP 310 // 295 + 15
+  #define TEMP_SENSOR_0   13
+  #define HEATER_0_MAXTEMP 300 // 295 + 15
 #elif ENABLED(PRUSA_AIO_THERMISTOR_GENERIC_100K)
   #define TEMP_SENSOR_0   1
   #define HEATER_0_MAXTEMP 310 // 295 + 15
