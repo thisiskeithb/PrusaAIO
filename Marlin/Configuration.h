@@ -2210,7 +2210,7 @@
 
 #define PREHEAT_2_LABEL       "PET"
 #define PREHEAT_2_TEMP_HOTEND 235
-#define PREHEAT_2_TEMP_BED     80
+#define PREHEAT_2_TEMP_BED     70
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
@@ -2224,10 +2224,10 @@
 #define PREHEAT_4_TEMP_BED     90
 #define PREHEAT_4_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_5_LABEL       "NOZZLE"
-#define PREHEAT_5_TEMP_HOTEND 280
-#define PREHEAT_5_TEMP_BED      0
-#define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
+//#define PREHEAT_5_LABEL       "NOZZLE"
+//#define PREHEAT_5_TEMP_HOTEND 280
+//#define PREHEAT_5_TEMP_BED      0
+//#define PREHEAT_5_FAN_SPEED     0 // Value from 0 to 255
 
 // @section motion
 
