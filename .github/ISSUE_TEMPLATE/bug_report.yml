@@ -1,27 +1,27 @@
 name: 🪲 Report a bug
-description: Create a bug report to help improve Marlin Firmware
+description: Create a bug report to help improve Prusa AIO Firmware
 title: "[BUG] (bug summary)"
-labels: ["Bug: Potential ?"]
+labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: >
-        Do you want to ask a question? Are you looking for support? Please use one of the [support links](https://github.com/MarlinFirmware/Marlin/issues/new/choose).
+        Do you want to ask a question? Are you looking for support? Please use one of the [support links](https://github.com/thisiskeithb/PrusaAIO/issues/new/choose).
 
   - type: markdown
     attributes:
       value: |
-        **Thank you for reporting a bug in Marlin Firmware!**
+        **Thank you for reporting a bug in Prusa AIO Firmware!**
 
         ## Before Reporting a Bug
 
-        - Read and understand Marlin's [Code of Conduct](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/.github/code_of_conduct.md). You are expected to comply with it, including treating everyone with respect.
+        - Read and understand Prusa AIO's [Code of Conduct](https://github.com/thisiskeithb/PrusaAIO/blob/prusa-aio-bugfix-2.1.x/.github/code_of_conduct.md). You are expected to comply with it, including treating everyone with respect.
 
-        - Test with the [`bugfix-2.1.x` branch](https://github.com/MarlinFirmware/Marlin/archive/bugfix-2.1.x.zip) to see whether the issue still exists.
+        - Test with the [`prusa-aio-bugfix-2.1.x` branch](https://github.com/thisiskeithb/PrusaAIO/archive/prusa-aio-bugfix-2.1.x.zip) to see whether the issue still exists.
 
         ## Instructions
 
-        Please follow the instructions below. Failure to do so may result in your issue being closed. See [Contributing to Marlin](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/.github/contributing.md) for additional guidelines.
+        Please follow the instructions below. Failure to do so may result in your issue being closed. See [Contributing to Prusa AIO](https://github.com/thisiskeithb/PrusaAIO/blob/prusa-aio-bugfix-2.1.x/.github/contributing.md) for additional guidelines.
 
         1. Provide a good title starting with [BUG].
         2. Fill out all sections of this bug report form.
@@ -29,10 +29,10 @@ body:
 
   - type: dropdown
     attributes:
-      label: Did you test the latest `bugfix-2.1.x` code?
+      label: Did you test the latest `prusa-aio-bugfix-2.1.x` code?
       description: >-
         Always try the latest code to make sure the issue you are reporting is not already fixed. To download
-        the latest code just [click this link](https://github.com/MarlinFirmware/Marlin/archive/bugfix-2.1.x.zip).
+        the latest code just [click this link](https://github.com/thisiskeithb/PrusaAIO/archive/prusa-aio-bugfix-2.1.x.zip).
       options:
         - Yes, and the problem still exists.
         - No, but I will test it now!
@@ -54,7 +54,7 @@ body:
 
         When pasting formatted text don't forget to put ` ``` ` (on its own line) before and after to make it readable.
       placeholder: |
-        Marlin doesn't work.
+        Prusa AIO doesn't work.
     validations:
       required: true
 
@@ -93,25 +93,20 @@ body:
 
   - type: input
     attributes:
-      label: Version of Marlin Firmware
-      description: "See the About Menu on the LCD or the output of `M115`. NOTE: For older releases we only patch critical bugs."
+      label: Version of Prusa AIO Firmware
+      description: "See the About Menu on the LCD or the output of `M115`."
     validations:
       required: true
 
   - type: input
     attributes:
-      label: Printer model
-      description: Creality Ender-3, Prusa mini, or Kossel Delta?
-
-  - type: input
-    attributes:
       label: Electronics
-      description: Stock electronics, upgrade board, or something else?
+      description: SKR 3.0, 2.0, Robin Nano V3, etc., or something else?
 
   - type: input
     attributes:
       label: LCD/Controller
-      description: Some Marlin behaviors are determined by the controller. Describe your LCD/Controller model and version.
+      description: Some Prusa AIO behaviors are determined by the controller. Describe your LCD/Controller model and version.
 
   - type: input
     attributes:
@@ -123,23 +118,19 @@ body:
       label: Bed Leveling
       description: What kind of bed leveling compensation are you using?
       options:
-        - UBL Bilinear mesh
         - ABL Bilinear mesh
-        - ABL Linear grid
-        - ABL 3-point
-        - MBL Manual Bed Leveling
-        - No Bed Leveling
+        - UBL Bilinear mesh
 
   - type: dropdown
     attributes:
       label: Your Slicer
-      description: Do you use Slic3r, Prusa Slicer, Simplify3D, IdeaMaker...?
+      description: Do you use PrusaSlicer, Cura, IdeaMaker, or something else?
       options:
-        - Slic3r
-        - Simplify3D
-        - Prusa Slicer
+        - PrusaSlicer
         - IdeaMaker
         - Cura
+        - Slic3r
+        - Simplify3D
         - Other (explain below)
 
   - type: dropdown
@@ -164,7 +155,7 @@ body:
     attributes:
       label: Don't forget to include
       options:
-        - label: A ZIP file containing your `Configuration.h` and `Configuration_adv.h`.
+        - label: A ZIP file containing your `Prusa_AIO_Configuration.h`.
           required: true
 
   - type: markdown
