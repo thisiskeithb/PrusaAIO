@@ -109,6 +109,11 @@ if pioutil.is_pio_build():
             rm_ofile("module", "settings")
 
         #
+        # Give Prusa AIO warnings on every build
+        #
+        rm_ofile("inc", "Prusa_AIO_Warnings")
+
+        #
         # Check for old files indicating an entangled Marlin (mixing old and new code)
         #
         mixedin = []

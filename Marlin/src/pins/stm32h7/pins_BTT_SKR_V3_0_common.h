@@ -505,16 +505,16 @@
       #define TOUCH_INT_PIN          EXP1_07_PIN
 
       #ifndef TOUCH_CALIBRATION_X
-        #define TOUCH_CALIBRATION_X        17540
+        #define TOUCH_CALIBRATION_X        20499
       #endif
       #ifndef TOUCH_CALIBRATION_Y
-        #define TOUCH_CALIBRATION_Y       -11388
+        #define TOUCH_CALIBRATION_Y       -13365
       #endif
       #ifndef TOUCH_OFFSET_X
-        #define TOUCH_OFFSET_X               -21
+        #define TOUCH_OFFSET_X               -58
       #endif
       #ifndef TOUCH_OFFSET_Y
-        #define TOUCH_OFFSET_Y               337
+        #define TOUCH_OFFSET_Y               356
       #endif
       #ifndef TOUCH_ORIENTATION
         #define TOUCH_ORIENTATION TOUCH_LANDSCAPE
@@ -597,7 +597,7 @@
           #define RGB_LED_B_PIN      EXP1_08_PIN
         #endif
       #elif ENABLED(FYSETC_MINI_12864_2_1)
-        #define NEOPIXEL_PIN         EXP1_06_PIN
+        //#define NEOPIXEL_PIN       EXP1_06_PIN
       #endif
     #endif // !FYSETC_MINI_12864
 

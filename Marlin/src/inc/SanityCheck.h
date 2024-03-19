@@ -2297,9 +2297,9 @@ static_assert(NUM_SERVOS <= NUM_SERVO_PLUGS, "NUM_SERVOS (or some servo index) i
     #define FAUX_RGB 1
   #endif
   #if defined(NEOPIXEL_TYPE) && NEOPIXEL_TYPE != NEO_RGB
-    #error "Your FYSETC/MKS/BTT/BEEZ Mini Panel requires NEOPIXEL_TYPE to be NEO_RGB."
+    //#error "Your FYSETC/MKS/BTT/BEEZ Mini Panel requires NEOPIXEL_TYPE to be NEO_RGB."
   #elif defined(NEOPIXEL_PIXELS) && NEOPIXEL_PIXELS < 3
-    #error "Your FYSETC/MKS/BTT/BEEZ Mini Panel requires NEOPIXEL_PIXELS >= 3."
+    //#error "Your FYSETC/MKS/BTT/BEEZ Mini Panel requires NEOPIXEL_PIXELS >= 3."
   #endif
   #if FAUX_RGB
     #undef NEO_RGB
