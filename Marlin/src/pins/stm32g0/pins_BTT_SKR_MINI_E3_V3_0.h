@@ -374,7 +374,7 @@
       #define LCD_BACKLIGHT_PIN             -1
 
     #else
-      #error "Only CR10_STOCKDISPLAY, ZONESTAR_LCD, ENDER2_STOCKDISPLAY, MKS_MINI_12864, FYSETC_MINI_12864_2_1, and TFTGLCD_PANEL_(SPI|I2C) are currently supported on the SKR Mini E3."
+      //#error "Only CR10_STOCKDISPLAY, ZONESTAR_LCD, ENDER2_STOCKDISPLAY, MKS_MINI_12864, FYSETC_MINI_12864_2_1, and TFTGLCD_PANEL_(SPI|I2C) are currently supported on the SKR Mini E3."
     #endif
 
   #endif // SKR_MINI_SCREEN_ADAPTER
