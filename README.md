@@ -1,142 +1,84 @@
-<p align="center"><img src="buildroot/share/pixmaps/logo/marlin-outrun-nf-500.png" height="250" alt="MarlinFirmware's logo" /></p>
+<p align="center"><img src="buildroot/share/pixmaps/logo/Prusa_AIO_Black_Bear_Marlin.png" height="300" alt="Prusa Bear" /></p>
 
-<h1 align="center">Marlin 3D Printer Firmware</h1>
+<h1 align="center">Prusa All-in-One Marlin Firmware</h1>
+<p align="center">All-in-One Marlin firmware for your 32-bit Prusa MK2.5S & MK3S/+ Bear!</p>
 
 <p align="center">
-    <a href="/LICENSE"><img alt="GPL-V3.0 License" src="https://img.shields.io/github/license/marlinfirmware/marlin.svg"></a>
-    <a href="https://github.com/MarlinFirmware/Marlin/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/marlinfirmware/marlin.svg"></a>
-    <a href="https://github.com/MarlinFirmware/Marlin/releases"><img alt="Last Release Date" src="https://img.shields.io/github/release-date/MarlinFirmware/Marlin"></a>
-    <a href="https://github.com/MarlinFirmware/Marlin/actions/workflows/ci-build-tests.yml"><img alt="CI Status" src="https://github.com/MarlinFirmware/Marlin/actions/workflows/ci-build-tests.yml/badge.svg"></a>
-    <a href="https://github.com/sponsors/thinkyhead"><img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/thinkyhead?color=db61a2"></a>
+    <a href="/LICENSE"><img alt="GPL-V3.0 License" src="https://img.shields.io/github/license/thisiskeithb/prusaaio.svg"></a>
+    <a href="https://github.com/thisiskeithb/PrusaAIO/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/thisiskeithb/prusaaio.svg"></a>
+    <a href="https://github.com/thisiskeithb/PrusaAIO/commits/prusa-aio-bugfix-2.1.x"><img alt="Last Commit Date" src="https://img.shields.io/github/last-commit/thisiskeithb/prusaaio/prusa-aio-bugfix-2.1.x"></a>
+    <a href="https://github.com/thisiskeithb/PrusaAIO/actions"><img alt="Prusa AIO CI Status" src="https://github.com/thisiskeithb/PrusaAIO/actions/workflows/test-prusa-aio-build.yml/badge.svg"></a>
+    <a href="https://github.com/sponsors/thisiskeithb"><img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/thisiskeithb?logo=github%20sponsors&label=GitHub%20Sponsors&color=ea4aaa"></a>
     <br />
-    <a href="https://fosstodon.org/@marlinfirmware"><img alt="Follow MarlinFirmware on Mastodon" src="https://img.shields.io/mastodon/follow/109450200866020466?domain=https%3A%2F%2Ffosstodon.org&logoColor=%2300B&style=social"></a>
+    <a href="https://twitter.com/thisiskeithb"><img alt="Follow thisiskeithb on Twitter" src="https://img.shields.io/twitter/url/https/twitter.com/thisiskeithb.svg?style=social&label=Follow%20%40thisiskeithb"></a>
 </p>
 
-Additional documentation can be found at the [Marlin Home Page](//marlinfw.org/).
-Please test this firmware and let us know if it misbehaves in any way. Volunteers are standing by!
+## Table of Contents
 
-## Marlin 2.1 Bugfix Branch
+- [Helpful Links](#helpful-links)
+- [Configuring Prusa All-in-One Firmware](#configuring-prusa-all-in-one-firmware)
+- [Building Prusa All-in-One Firmware](#building-prusa-all-in-one-firmware)
+- [Supported Hardware Upgrades](#supported-hardware-upgrades)
+- [Changes to Slicer Start G-code](#changes-to-slicer-start-g-code)
+- [Upgrade Caveats](#upgrade-caveats)
+- [Credits](#credits)
+- [License](#license)
 
-__Not for production use. Use with caution!__
+## Helpful Links
 
-Marlin 2.1 takes this popular RepRap firmware to the next level by adding support for much faster 32-bit and ARM-based boards while improving support for 8-bit AVR boards. Read about Marlin's decision to use a "Hardware Abstraction Layer" below.
+ - [Prusa AIO Wiki](//github.com/thisiskeithb/PrusaAIO/wiki/) &mdash; Includes wiring information, recommended motherboard & LCD cases, purchase links for supported hardware, and more!
+ - [Prusa AIO Discussions](//github.com/thisiskeithb/PrusaAIO/discussions)
+ - [Prusa Bear Upgrade Facebook group](//facebook.com/groups/prusabearupgrade/)
+ - [Prusa Community Facebook group](//facebook.com/groups/675831176090951/)
 
-This branch is for patches to the latest 2.1.x release version. Periodically this branch will form the basis for the next minor 2.1.x release.
+ You can also find me on the [MarlinFirmware Discord](//discord.com/servers/marlin-firmware-461605380783472640): [💬 thisiskeithb#4707](//discordapp.com/users/602976310805135370)
 
-Download earlier versions of Marlin on the [Releases page](//github.com/MarlinFirmware/Marlin/releases).
+## Configuring Prusa All-in-One Firmware
 
-## Example Configurations
+To configure this firmware, enable options in [`Prusa_AIO_Configuration.h`](Marlin/Prusa_AIO_Configuration.h). No other config file editing is required!
 
-Before you can build Marlin for your machine you'll need a configuration for your specific hardware. Upon request, your vendor will be happy to provide you with the complete source code and configurations for your machine, but you'll need to get updated configuration files if you want to install a newer version of Marlin. Fortunately, Marlin users have contributed dozens of tested configurations to get you started. Visit the [MarlinFirmware/Configurations](//github.com/MarlinFirmware/Configurations) repository to find the right configuration for your hardware.
+## Building Prusa All-in-One Firmware
 
-## Building Marlin 2.1
+To build this firmware, you'll need [Visual Studio Code](//code.visualstudio.com/) with [PlatformIO](//docs.platformio.org/en/latest/integration/ide/vscode.html#platformio-ide-for-vscode). Detailed setup instructions can be found in the [Installing Marlin (PlatformIO with VSCode)](//marlinfw.org/docs/basics/install_platformio_vscode.html) guide.
 
-To build and upload Marlin you will use one of these tools:
+## Supported Hardware Upgrades
 
-- The free [Visual Studio Code](//code.visualstudio.com/download) using the [Auto Build Marlin](//marlinfw.org/docs/basics/auto_build_marlin.html) extension.
-- The free [Arduino IDE](//www.arduino.cc/en/main/software) : See [Building Marlin with Arduino](//marlinfw.org/docs/basics/install_arduino.html)
-- You can also use VSCode with devcontainer : See [Installing Marlin (VSCode devcontainer)](http://marlinfw.org/docs/basics/install_devcontainer_vscode.html).
+In addition to the stock hardware (except the Einsy motherboard & Power Panic), the following upgrades are supported:
 
-Marlin is optimized to build with the **PlatformIO IDE** extension for **Visual Studio Code**. You can still build Marlin with **Arduino IDE**, and we hope to improve the Arduino build experience, but at this time PlatformIO is the better choice.
+- **Motherboards**: BigTreeTech SKR 3.0 & 3.0 EZ, 2.0 with optional flash drive support, 1.4 & 1.4 Turbo, SKR 1.3, BTT002 1.0, SKR Mini E3 V3.x & V2, MKS/Makerbase Robin Nano V3.x & Eagle with optional flash drive support, SGEN_L V2, and Robin E3 & E3D V1.x
+- **Drivers**: TMC2130s, TMC2209s, TMC2226s, and TMC5160s
+- **Displays**: BigTreeTech dual mode TFT (TFT35, TFT50, TFT70, etc.), WINSTAR OLED-based RepRapDiscount smart controller, and Mini 12864 with NeoPixel RGB backlight (BigTreeTech Mini 12864 V1/V2 and MKS Mini 12864 V3)
+- **LDO/Moons Stepper Motors**: Planetary extruder and 0.9° X/Y/E
+- **Extruders:**
+  - **BearExxa**: [V1](//github.com/gregsaun/bear_extruder_and_x_axis/) and [V2 (Beta)](//github.com/gregsaun/BearExxa-V2)
+  - **Bondtech BMG**: Bondtech BMG upgrade kit and printed BMG
+  - **SFP**: Gerd Jentz's "Short Filament Path" extruder based on Bondtech BMG with Mosquito hotend
+- **Hotends**: E3D Revo Six, E3D Revo Micro, and Slice Engineering Mosquito / Magnum
+- **5015 Part Cooling Fans**: 24V Mechatronics B5015E24B-BSR, 24V Delta BFB0524HH, 24V SoundOriginal, 5V LDO DF5015H05S
+- **High Temperature Thermistors**: Slice Engineering 450°C and Trianglelab T-D500 (Dyze Design) 500°C
+- **Probes**: BLTouch and SuperPINDA
+- NeoPixels
+- ESP WiFi addon running [ESP3D](//github.com/luc-github/ESP3D)
 
-## 8-Bit AVR Boards
+## Changes to Slicer Start G-code
 
-We intend to continue supporting 8-bit AVR boards in perpetuity, maintaining a single codebase that can apply to all machines. We want casual hobbyists and tinkerers and owners of older machines to benefit from the community's innovations just as much as those with fancier machines. Plus, those old AVR-based machines are often the best for your testing and feedback!
+The `W` in Prusa's `G28 W ; home all without mesh bed level` default G-code does not exist in Marlin and `G80 ; mesh bed leveling` cancels the current motion mode, so no bed leveling will take place. See the [Changes to Start G-code](//github.com/thisiskeithb/PrusaAIO/wiki/Slicer-G%E2%80%90Code-Notes) wiki article for example start G-code scripts from popular slicers for required changes.
 
-## Hardware Abstraction Layer (HAL)
+## Upgrade Caveats
 
-Marlin includes an abstraction layer to provide a common API for all the platforms it targets. This allows Marlin code to address the details of motion and user interface tasks at the lowest and highest levels with no system overhead, tying all events directly to the hardware clock.
+As noted in the [Supported Hardware Upgrades](#supported-hardware-upgrades) section above, the stock Einsy board & Power Panic are not supported. This firmware is based on Marlin `bugfix-2.1.x` with options specifically tailored to a Prusa MK3S/+ or MK2.5S Bear with various hardware upgrades. You will lose Prusa firmware features like the setup wizards, automatic calibration, etc., but you can now use a variety of 32-bit boards, modern TMC drivers, and a bunch of other hardware by enabling a few config options in [`Prusa_AIO_Configuration.h`](Marlin/Prusa_AIO_Configuration.h).
 
-Every new HAL opens up a world of hardware. At this time we need HALs for RP2040 and the Duet3D family of boards. A HAL that wraps an RTOS is an interesting concept that could be explored. Did you know that Marlin includes a Simulator that can run on Windows, macOS, and Linux? Join the Discord to help move these sub-projects forward!
+## Credits & Thanks
 
-### Supported Platforms
+If you find this project helpful, please consider donating!
 
-  Platform|MCU|Example Boards
-  --------|---|-------
-  [Arduino AVR](//www.arduino.cc/)|ATmega|RAMPS, Melzi, RAMBo
-  [Teensy++ 2.0](//www.microchip.com/en-us/product/AT90USB1286)|AT90USB1286|Printrboard
-  [Arduino Due](//www.arduino.cc/en/Guide/ArduinoDue)|SAM3X8E|RAMPS-FD, RADDS, RAMPS4DUE
-  [ESP32](//github.com/espressif/arduino-esp32)|ESP32|FYSETC E4, E4d@BOX, MRR
-  [LPC1768](//www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-cortex-m3/512-kb-flash-64-kb-sram-ethernet-usb-lqfp100-package:LPC1768FBD100)|ARM® Cortex-M3|MKS SBASE, Re-ARM, Selena Compact
-  [LPC1769](//www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-cortex-m3/512-kb-flash-64-kb-sram-ethernet-usb-lqfp100-package:LPC1769FBD100)|ARM® Cortex-M3|Smoothieboard, Azteeg X5 mini, TH3D EZBoard
-  [STM32F103](//www.st.com/en/microcontrollers-microprocessors/stm32f103.html)|ARM® Cortex-M3|Malyan M200, GTM32 Pro, MKS Robin, BTT SKR Mini
-  [STM32F401](//www.st.com/en/microcontrollers-microprocessors/stm32f401.html)|ARM® Cortex-M4|ARMED, Rumba32, SKR Pro, Lerdge, FYSETC S6, Artillery Ruby
-  [STM32F7x6](//www.st.com/en/microcontrollers-microprocessors/stm32f7x6.html)|ARM® Cortex-M7|The Borg, RemRam V1
-  [STM32G0B1RET6](//www.st.com/en/microcontrollers-microprocessors/stm32g0x1.html)|ARM® Cortex-M0+|BigTreeTech SKR mini E3 V3.0
-  [STM32H743xIT6](//www.st.com/en/microcontrollers-microprocessors/stm32h743-753.html)|ARM® Cortex-M7|BigTreeTech SKR V3.0, SKR EZ V3.0, SKR SE BX V2.0/V3.0
-  [SAMD51P20A](//www.adafruit.com/product/4064)|ARM® Cortex-M4|Adafruit Grand Central M4
-  [Teensy 3.5](//www.pjrc.com/store/teensy35.html)|ARM® Cortex-M4|
-  [Teensy 3.6](//www.pjrc.com/store/teensy36.html)|ARM® Cortex-M4|
-  [Teensy 4.0](//www.pjrc.com/store/teensy40.html)|ARM® Cortex-M7|
-  [Teensy 4.1](//www.pjrc.com/store/teensy41.html)|ARM® Cortex-M7|
-  Linux Native|x86/ARM/etc.|Raspberry Pi
-  [All supported boards](//marlinfw.org/docs/hardware/boards.html#boards-list)|All platforms|All boards
-
-## Marlin Support
-
-The Issue Queue is reserved for Bug Reports and Feature Requests. Please use the following resources for help with configuration and troubleshooting:
-
-- [Marlin Documentation](//marlinfw.org) - Official Marlin documentation
-- [Marlin Discord](//discord.com/servers/marlin-firmware-461605380783472640) - Discuss issues with Marlin users and developers
-- Facebook Group ["Marlin Firmware"](//www.facebook.com/groups/1049718498464482/)
-- RepRap.org [Marlin Forum](//forums.reprap.org/list.php?415)
-- Facebook Group ["Marlin Firmware for 3D Printers"](//www.facebook.com/groups/3Dtechtalk/)
-- [Marlin Configuration](//www.youtube.com/results?search_query=marlin+configuration) on YouTube
-
-## Contributing Patches
-
-You can contribute patches by submitting a Pull Request to the ([bugfix-2.1.x](//github.com/MarlinFirmware/Marlin/tree/bugfix-2.1.x)) branch.
-
-- We use branches named with a "bugfix" or "dev" prefix to fix bugs and integrate new features.
-- Follow the [Coding Standards](//marlinfw.org/docs/development/coding_standards.html) to gain points with the maintainers.
-- Please submit Feature Requests and Bug Reports to the [Issue Queue](//github.com/MarlinFirmware/Marlin/issues/new/choose). See above for user support.
-- Whenever you add new features, be sure to add one or more build tests to `buildroot/tests`. Any tests added to a PR will be run within that PR on GitHub servers as soon as they are pushed. To minimize iteration be sure to run your new tests locally, if possible.
-  - Local build tests:
-    - All: `make tests-config-all-local`
-    - Single: `make tests-config-single-local TEST_TARGET=...`
-  - Local build tests in Docker:
-    - All: `make tests-config-all-local-docker`
-    - Single: `make tests-config-all-local-docker TEST_TARGET=...`
-  - To run all unit test suites:
-    - Using PIO: `platformio run -t test-marlin`
-    - Using Make: `make unit-test-all-local`
-    - Using Docker + make: `maker unit-test-all-local-docker`
-  - To run a single unit test suite:
-    - Using PIO: `platformio run -t marlin_<test-suite-name>`
-    - Using make: `make unit-test-single-local TEST_TARGET=<test-suite-name>`
-    - Using Docker + make: `maker unit-test-single-local-docker TEST_TARGET=<test-suite-name>`
-- If your feature can be unit tested, add one or more unit tests. For more information see our documentation on [Unit Tests](test).
-
-## Contributors
-
-Marlin is constantly improving thanks to a huge number of contributors from all over the world bringing their specialties and talents. Huge thanks are due to [all the contributors](//github.com/MarlinFirmware/Marlin/graphs/contributors) who regularly patch up bugs, help direct traffic, and basically keep Marlin from falling apart. Marlin's continued existence would not be possible without them.
-
-Marlin Firmware original logo design by Ahmet Cem TURAN [@ahmetcemturan](//github.com/ahmetcemturan).
-
-## Project Leadership
-
-Name|Role|Link|Donate
-----|----|----|----
-🇺🇸 Scott Lahteine|Project Lead|[[@thinkyhead](//github.com/thinkyhead)]|[💸 Donate](//marlinfw.org/docs/development/contributing.html#donate)
-🇺🇸 Roxanne Neufeld|Admin|[[@Roxy-3D](//github.com/Roxy-3D)]|
-🇺🇸 Keith Bennett|Admin|[[@thisiskeithb](//github.com/thisiskeithb)]|[💸 Donate](//github.com/sponsors/thisiskeithb)
-🇺🇸 Jason Smith|Admin|[[@sjasonsmith](//github.com/sjasonsmith)]|
-🇧🇷 Victor Oliveira|Admin|[[@rhapsodyv](//github.com/rhapsodyv)]|
-🇬🇧 Chris Pepper|Admin|[[@p3p](//github.com/p3p)]|
-🇳🇿 Peter Ellens|Admin|[[@ellensp](//github.com/ellensp)]|[💸 Donate](//ko-fi.com/ellensp)
-🇺🇸 Bob Kuhn|Admin|[[@Bob-the-Kuhn](//github.com/Bob-the-Kuhn)]|
-🇳🇱 Erik van der Zalm|Founder|[[@ErikZalm](//github.com/ErikZalm)]|
-
-## Star History
-
-<a id="starchart" href="https://star-history.com/#MarlinFirmware/Marlin&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MarlinFirmware/Marlin&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MarlinFirmware/Marlin&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MarlinFirmware/Marlin&type=Date" />
-  </picture>
-</a>
+ - Keith Bennett [[thisiskeithb](//github.com/thisiskeithb)], Prusa AIO Creator - [💸 Github Sponsors](//github.com/sponsors/thisiskeithb) / [☕ Ko-fi](//ko-fi.com/thisiskeithb)
+ - Chris Warkocki [[codiac2600](//github.com/codiac2600/)], SKR Bear Project
+ - Grégoire Saunier [[gregsaun](//github.com/gregsaun)], Prusa Bear Project - [💸 Patreon](//patreon.com/gregsaun)
+ - Scott Lahteine [[thinkyhead](//github.com/thinkyhead)], Marlin Maintainer - [💸 Donate](//www.thinkyhead.com/donate-to-marlin)
+ - [E3D](https://e3d-online.com/) for providing hotends for testing
+ - First layer calibration based on [Prusa's MK3/S/+ "meander" first layer calibration](//github.com/prusa3d/Prusa-Firmware/blob/MK3/Firmware/first_lay_cal.cpp)
 
 ## License
 
-Marlin is published under the [GPL license](/LICENSE) because we believe in open development. The GPL comes with both rights and obligations. Whether you use Marlin firmware as the driver for your open or closed-source product, you must keep Marlin open, and you must provide your compatible Marlin source code to end users upon request. The most straightforward way to comply with the Marlin license is to make a fork of Marlin on Github, perform your modifications, and direct users to your modified fork.
+Marlin and the Prusa All-in-One Firmware are published under the [GPL license](/LICENSE) because we believe in open development.

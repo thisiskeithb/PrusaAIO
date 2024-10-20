@@ -494,7 +494,7 @@
           #define RGB_LED_B_PIN      EXP1_08_PIN
         #endif
       #elif ENABLED(FYSETC_MINI_12864_2_1)
-        #define NEOPIXEL_PIN         EXP1_06_PIN
+        //#define NEOPIXEL_PIN       EXP1_06_PIN
       #endif
     #endif // !FYSETC_MINI_12864
 

@@ -1,0 +1,46 @@
+#
+# test-prusa-aio-build.yml
+# Basic test build to catch Prusa AIO compile errors
+#
+
+name: Prusa AIO CI
+
+on:
+  pull_request:
+    paths-ignore:
+    - config/**
+    - data/**
+    - docs/**
+    - '**/*.md'
+  push:
+    paths-ignore:
+    - config/**
+    - data/**
+    - docs/**
+    - '**/*.md'
+
+jobs:
+  test_builds:
+    name: Test Build
+    if: github.repository == 'thisiskeithb/PrusaAIO'
+
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Check out PrusaAIO
+      uses: actions/checkout@v4
+
+    - name: Select Python 3.x
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+        architecture: 'x64'
+
+    - name: Install PlatformIO
+      run: |
+        pip install -U platformio
+        pio upgrade --dev
+        pio pkg update --global
+
+    - name: Build Marlin
+      run: pio run
